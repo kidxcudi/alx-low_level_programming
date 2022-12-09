@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * main - Prints all single digit numbers of 10 starting from 0, 
- * only using putchar and without char variables.
- * Return: Always 0.
+ * main - Prints all single digit numbers of 10 starting from 0,
+ * only using putchar and without char variables
+ * Return: Always 0;
  */
 int main(void)
 {
@@ -12,6 +12,8 @@ int main(void)
 	{
 		putchar((num % 10) + '0');
 	}
+
 	putchar('\n');
+
 	return (0);
 }
