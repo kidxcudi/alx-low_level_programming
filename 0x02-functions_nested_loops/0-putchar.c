@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * main - Prints _putchar followed by new line
- * Return :Always #include <stdio.h>
+ * main - Prints "Holberton" followed by a new line.
+ *
+ * Return: Always 0.
  */
 int main(void)
 {
-	printf("_putchar \n");
+	printf("_putchar\n");
+	return (0);
 }
