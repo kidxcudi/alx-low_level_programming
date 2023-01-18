@@ -1,63 +1,34 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * op_add - adds two number.
- * @a: first number.
- * @b: second number.
- * Return: result.
+ * main - generates opcodes.
+ * @argc: argument counter.
+ * @argv: argument vector.
+ * Return: the opcodes
  */
-int op_add(int a, int b)
+int main(int argc, char **argv)
 {
-	return (a + b);
-}
-/**
- * op_sub - substracts two number.
- * @a: first number.
- * @b: second number.
- * Return: result.
- */
-int op_sub(int a, int b)
-{
-	return (a - b);
-}
-/**
- * op_mul - multiplicates two number.
- * @a: first number.
- * @b: second number.
- * Return: result.
- */
-int op_mul(int a, int b)
-{
-	return (a * b);
-}
-/**
- * op_div - divides two number.
- * @a: first number.
- * @b: second number.
- * Return: result.
- */
-int op_div(int a, int b)
-{
-	if (b == 0)
+	int i, number;
+
+	if (argc != 2)
 	{
-		puts("Error");
-		exit(100);
+		printf("Error\n");
+		return (1);
 	}
-	else
-		return (a / b);
-}
-/**
- * op_mod - obteins the module between two number.
- * @a: first number.
- * @b: second number.
- * Return: result.
- */
-int op_mod(int a, int b)
-{
-	if (b == 0)
+	number = atoi(argv[1]);
+	if (number < 0)
 	{
-		puts("Error");
-		exit(100);
+		printf("Error\n");
+		exit(2);
 	}
-	return (a % b);
+
+	for (i = 0; i < number; i++)
+	{
+		printf("%02hhx", ((char *)main)[i]);
+		if (i == (number - 1))
+			printf("\n");
+		else
+			printf(" ");
+	}
+	return (0);
 }
